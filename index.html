@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Asset Storage</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f2f2f2;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      text-align: center;
+      color: #333;
+    }
+
+    .asset-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .asset-item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .asset-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .asset-item img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px 8px 0 0;
+      transition: filter 0.3s ease;
+    }
+
+    .asset-item audio {
+      width: 100%;
+      border-radius: 0 0 8px 8px;
+    }
+
+    .asset-item p {
+      padding: 10px;
+      margin: 0;
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .asset-item:hover img {
+      filter: brightness(80%);
+    }
+
+    .asset-item:hover p {
+      color: #000;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .asset-item:hover .overlay {
+      opacity: 1;
+    }
+
+    .overlay-icons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .asset-item:hover .overlay-icons {
+      opacity: 1;
+    }
+
+    .overlay-icons a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 20px;
+      transition: color 0.3s ease;
+      margin: 0 5px;
+    }
+
+    .overlay-icons a:hover {
+      color: #ff5252;
+    }
+	
+
+	
+  </style>
+</head>
+<body>
+  <h1>Songs And Wallpaper For PC And Android</h1>
+  
+  <div class="asset-container">
+    <!-- Example image asset -->
+    <div class="asset-item">
+      <img src="space.png" alt="Image 1">
+      <div class="overlay">
+        <div class="overlay-icons">
+          <a href="#" title="Download"><i class="fas fa-download"></i></a>
+          <a href="#" title="View"><i class="fas fa-eye"></i></a>
+          <a href="#" title="Delete"><i class="fas fa-trash"></i></a>
+        </div>
+        <p class="overlay-text">View Image</p>
+      </div>
+    </div>
+	
+	<div class="asset-item">
+      <img src="puremc.png" alt="Image 2">
+      <div class="overlay">
+        <div class="overlay-icons">
+          <a href="#" title="Download"><i class="fas fa-download"></i></a>
+          <a href="#" title="View"><i class="fas fa-eye"></i></a>
+          <a href="#" title="Delete"><i class="fas fa-trash"></i></a>
+        </div>
+        <p class="overlay-text">View Image</p>
+      </div>
+    </div>
+	
+	<div class="asset-item">
+      <img src="space.png" alt="Image 2">
+      <div class="overlay">
+        <div class="overlay-icons">
+          <a href="#" title="Download"><i class="fas fa-download"></i></a>
+          <a href="#" title="View"><i class="fas fa-eye"></i></a>
+          <a href="#" title="Delete"><i class="fas fa-trash"></i></a>
+        </div>
+        <p class="overlay-text">View Image</p>
+      </div>
+    </div>
+	
+	<div class="asset-item">
+      <img src="space.png" alt="Image 2">
+      <div class="overlay">
+        <div class="overlay-icons">
+          <a href="#" title="Download"><i class="fas fa-download"></i></a>
+          <a href="#" title="View"><i class="fas fa-eye"></i></a>
+          <a href="#" title="Delete"><i class="fas fa-trash"></i></a>
+        </div>
+        <p class="overlay-text">View Image</p>
+      </div>
+    </div>
+	
+	<div class="asset-item">
+      <img src="space.png" alt="Image 2">
+      <div class="overlay">
+        <div class="overlay-icons">
+          <a href="#" title="Download"><i class="fas fa-download"></i></a>
+          <a href="#" title="View"><i class="fas fa-eye"></i></a>
+          <a href="#" title="Delete"><i class="fas fa-trash"></i></a>
+        </div>
+        <p class="overlay-text">View Image</p>
+      </div>
+    </div>
+	
+	<div class="asset-item">
+      <img src="space.png" alt="Image 2">
+      <div class="overlay">
+        <div class="overlay-icons">
+          <a href="#" title="Download"><i class="fas fa-download"></i></a>
+          <a href="#" title="View"><i class="fas fa-eye"></i></a>
+          <a href="#" title="Delete"><i class="fas fa-trash"></i></a>
+        </div>
+        <p class="overlay-text">View Image</p>
+      </div>
+    </div>
+	
+	<div class="asset-item">
+      <img src="space.png" alt="Image 2">
+      <div class="overlay">
+        <div class="overlay-icons">
+          <a href="#" title="Download"><i class="fas fa-download"></i></a>
+          <a href="#" title="View"><i class="fas fa-eye"></i></a>
+          <a href="#" title="Delete"><i class="fas fa-trash"></i></a>
+        </div>
+        <p class="overlay-text">View Image</p>
+      </div>
+    </div>
+	
+	<div class="asset-item">
+      <img src="space.png" alt="Image 2">
+      <div class="overlay">
+        <div class="overlay-icons">
+          <a href="#" title="Download"><i class="fas fa-download"></i></a>
+          <a href="#" title="View"><i class="fas fa-eye"></i></a>
+          <a href="#" title="Delete"><i class="fas fa-trash"></i></a>
+        </div>
+        <p class="overlay-text">View Image</p>
+      </div>
+    </div>
+	
+	<div class="asset-item">
+      <img src="space.png" alt="Image 2">
+      <div class="overlay">
+        <div class="overlay-icons">
+          <a href="#" title="Download"><i class="fas fa-download"></i></a>
+          <a href="#" title="View"><i class="fas fa-eye"></i></a>
+          <a href="#" title="Delete"><i class="fas fa-trash"></i></a>
+        </div>
+        <p class="overlay-text">View Image</p>
+      </div>
+    </div>
+	
+	<div class="asset-item">
+      <img src="space.png" alt="Image 2">
+      <div class="overlay">
+        <div class="overlay-icons">
+          <a href="#" title="Download"><i class="fas fa-download"></i></a>
+          <a href="#" title="View"><i class="fas fa-eye"></i></a>
+          <a href="#" title="Delete"><i class="fas fa-trash"></i></a>
+        </div>
+        <p class="overlay-text">View Image</p>
+      </div>
+    </div>
+	
+	<div class="asset-item">
+      <img src="space.png" alt="Image 2">
+      <div class="overlay">
+        <div class="overlay-icons">
+          <a href="#" title="Download"><i class="fas fa-download"></i></a>
+          <a href="#" title="View"><i class="fas fa-eye"></i></a>
+          <a href="#" title="Delete"><i class="fas fa-trash"></i></a>
+        </div>
+        <p class="overlay-text">View Image</p>
+      </div>
+    </div>
+	
+	<div class="asset-item">
+      <img src="space.png" alt="Image 2">
+      <div class="overlay">
+        <div class="overlay-icons">
+          <a href="#" title="Download"><i class="fas fa-download"></i></a>
+          <a href="#" title="View"><i class="fas fa-eye"></i></a>
+          <a href="#" title="Delete"><i class="fas fa-trash"></i></a>
+        </div>
+        <p class="overlay-text">View Image</p>
+      </div>
+    </div>
+	<div class="asset-item">
+      <img src="space.png" alt="Image 2">
+      <div class="overlay">
+        <div class="overlay-icons">
+          <a href="#" title="Download"><i class="fas fa-download"></i></a>
+          <a href="#" title="View"><i class="fas fa-eye"></i></a>
+          <a href="#" title="Delete"><i class="fas fa-trash"></i></a>
+        </div>
+        <p class="overlay-text">View Image</p>
+      </div>
+    </div>
+	
+	<div class="asset-item">
+      <img src="space.png" alt="Image 2">
+      <div class="overlay">
+        <div class="overlay-icons">
+          <a href="#" title="Download"><i class="fas fa-download"></i></a>
+          <a href="#" title="View"><i class="fas fa-eye"></i></a>
+          <a href="#" title="Delete"><i class="fas fa-trash"></i></a>
+        </div>
+        <p class="overlay-text">View Image</p>
+      </div>
+    </div>
+	
+	<div class="asset-item">
+      <img src="space.png" alt="Image 2">
+      <div class="overlay">
+        <div class="overlay-icons">
+          <a href="#" title="Download"><i class="fas fa-download"></i></a>
+          <a href="#" title="View"><i class="fas fa-eye"></i></a>
+          <a href="#" title="Delete"><i class="fas fa-trash"></i></a>
+        </div>
+        <p class="overlay-text">View Image</p>
+      </div>
+    </div>
+	
+	<div class="asset-item">
+      <img src="space.png" alt="Image 2">
+      <div class="overlay">
+        <div class="overlay-icons">
+          <a href="#" title="Download"><i class="fas fa-download"></i></a>
+          <a href="#" title="View"><i class="fas fa-eye"></i></a>
+          <a href="#" title="Delete"><i class="fas fa-trash"></i></a>
+        </div>
+        <p class="overlay-text">View Image</p>
+      </div>
+    </div>
+	
+	<div class="asset-item">
+      <img src="space.png" alt="Image 2">
+      <div class="overlay">
+        <div class="overlay-icons">
+          <a href="#" title="Download"><i class="fas fa-download"></i></a>
+          <a href="#" title="View"><i class="fas fa-eye"></i></a>
+          <a href="#" title="Delete"><i class="fas fa-trash"></i></a>
+        </div>
+        <p class="overlay-text">View Image</p>
+      </div>
+    </div>
+	
+	<div class="asset-item">
+      <img src="space.png" alt="Image 2">
+      <div class="overlay">
+        <div class="overlay-icons">
+          <a href="#" title="Download"><i class="fas fa-download"></i></a>
+          <a href="#" title="View"><i class="fas fa-eye"></i></a>
+          <a href="#" title="Delete"><i class="fas fa-trash"></i></a>
+        </div>
+        <p class="overlay-text">View Image</p>
+      </div>
+    </div>
+	
+	<div class="asset-item">
+      <img src="space.png" alt="Image 2">
+      <div class="overlay">
+        <div class="overlay-icons">
+          <a href="#" title="Download"><i class="fas fa-download"></i></a>
+          <a href="#" title="View"><i class="fas fa-eye"></i></a>
+          <a href="#" title="Delete"><i class="fas fa-trash"></i></a>
+        </div>
+        <p class="overlay-text">View Image</p>
+      </div>
+    </div>
+	
+	<div class="asset-item">
+      <img src="space.png" alt="Image 2">
+      <div class="overlay">
+        <div class="overlay-icons">
+          <a href="#" title="Download"><i class="fas fa-download"></i></a>
+          <a href="#" title="View"><i class="fas fa-eye"></i></a>
+          <a href="#" title="Delete"><i class="fas fa-trash"></i></a>
+        </div>
+        <p class="overlay-text">View Image</p>
+      </div>
+    </div>
+	
+	<div class="asset-item">
+      <img src="space.png" alt="Image 2">
+      <div class="overlay">
+        <div class="overlay-icons">
+          <a href="#" title="Download"><i class="fas fa-download"></i></a>
+          <a href="#" title="View"><i class="fas fa-eye"></i></a>
+          <a href="#" title="Delete"><i class="fas fa-trash"></i></a>
+        </div>
+        <p class="overlay-text">View Image</p>
+      </div>
+    </div>
+	
+	<div class="asset-item">
+      <img src="space.png" alt="Image 2">
+      <div class="overlay">
+        <div class="overlay-icons">
+          <a href="#" title="Download"><i class="fas fa-download"></i></a>
+          <a href="#" title="View"><i class="fas fa-eye"></i></a>
+          <a href="#" title="Delete"><i class="fas fa-trash"></i></a>
+        </div>
+        <p class="overlay-text">View Image</p>
+      </div>
+    </div>
+	
+	<div class="asset-item">
+      <img src="space.png" alt="Image 2">
+      <div class="overlay">
+        <div class="overlay-icons">
+          <a href="#" title="Download"><i class="fas fa-download"></i></a>
+          <a href="#" title="View"><i class="fas fa-eye"></i></a>
+          <a href="#" title="Delete"><i class="fas fa-trash"></i></a>
+        </div>
+        <p class="overlay-text">View Image</p>
+      </div>
+    </div>
+	
+	
+    
+    <!-- Example sound asset -->
+    <div class="asset-item">
+      <audio controls>
+        <source src="phir.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <div class="overlay">
+        <div class="overlay-icons">
+          <a href="#" title="Download"><i class="fas fa-download"></i></a>
+          <a href="phir.mp3" title="Play" class="play-button"><i class="fas fa-play"></i></a>
+          <a href="#" title="Delete"><i class="fas fa-trash"></i></a>
+        </div>
+        <p class="overlay-text">Play Sound</p>
+      </div>
+    </div>
+    
+    <!-- Add more asset items as needed -->
+  </div>
+  
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
+  <script>
+    const playButtons = document.querySelectorAll('.play-button');
+
+    playButtons.forEach(button => {
+      button.addEventListener('click', function(e) {
+        const audioElement = button.parentNode.previousElementSibling;
+        
+        if (audioElement.paused) {
+          audioElement.play();
+          button.innerHTML = '<i class="fas fa-pause"></i>';
+        } else {
+          audioElement.pause();
+          button.innerHTML = '<i class="fas fa-play"></i>';
+        }
+        
+        e.preventDefault();
+      });
+    });
+  </script>
+</body>
+</html>
